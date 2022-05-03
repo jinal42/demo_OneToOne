@@ -12,9 +12,11 @@ class UserProfile(models.Model):
       user=models.OneToOneField(User, on_delete=models.CASCADE)
       phone=models.CharField(max_length=10,blank=True)
       # gender=models.CharField(max_length=15,default='female',choices=gender)
+     
       gender=models.CharField(max_length=15,default='female')
 
       #hobby=models.CharField(max_length=255,default='dance',choices=hobby)
+      
       hobby=models.CharField(max_length=255,default='dance')
 
 

@@ -1,51 +1,6 @@
-<!--
-
-
-<form action=" " method="post">
-  {% csrf_token %}
-  <div class="container">
-    <h1>Register</h1>
-    
-    <hr>
-
-  <lable>Name</lable>
-  <input type="text"  name="name" id="name" ><br><br>
-
-
-  <lable>Email</lable>
-  <input type="text"  name="email" id="email" ><br><br>
-
-  <lable>Password</lable>
-    <input type="password"  name="pwd" id="pwd" ><br><br>
-
-  Gender                   
-    <input type="radio"  name="gen" value="male" id="male"> Male</input>
-    <input type="radio"  name="gen" value="female" id="female"> Female</input> <br><br>
-  Mobile No 
-   <input type="number" name="phone" ></input><br><br>
-  
-  Hobby  
-  <input type="checkbox" id="chkDance" name="hobby[]" value="dance"  > Dance</input>
-    <input type="checkbox"  id="chkR"  name="hobby[]" value="reading" > Reading</input>
-    <input type="checkbox" id="chkD"   name="hobby[]" value="drawing" > Drawing</input> <br><br>
-
 
     <hr>
-
-    <button type="submit" >Register</button>
-
-
-<form method="post" action="">
-      {% csrf_token %}
-      {{ user_form.as_p }}
-      
-      {{ profile_form.as_p }}
-      <button type="submit">Save changes</button>
-    </form>
--->
-
-    <hr>
-    <a href="login/login.html" >login</a>
+    <a href="{% url 'logandshow'  %}" >login</a>
 
     <hr>
 
@@ -53,21 +8,23 @@
       {% csrf_token %}
       {{ user_form.as_p }}
     <!--  {{ profile_form.as_p }} -->
-     
+      
        <hr>
   Gender                   
-    <input type="radio"  name="gender" value="male" id="male"> Male</input>
-    <input type="radio"  name="gender" value="female" id="female"> Female</input> <br><br>
+    <input type="radio"  name="gender" value="male" id="male"> Male </input>
+    <input type="radio"  name="gender" value="female" id="female"> Female </input> <br><br>
   Mobile No 
    <input type="number" name="phone" ></input><br><br>
   
-  Hobby  
-  <input type="checkbox" id="chkDance" name="hobby[]" value="dance"  > Dance</input>
-    <input type="checkbox"  id="chkR"  name="hobby[]" value="reading" > Reading</input>
-    <input type="checkbox" id="chkD"   name="hobby[]" value="drawing" > Drawing</input> <br><br>
-  DOB
-  <input type="date" name="birth_date"></input> <br><br> 
-      <button type="submit">Save changes</button>
+  Hobby 
+  <input type="checkbox" id="chkDance" name="hobby[]" value="dance" >Dance </input> 
+  <input type="checkbox"  id="chkR"  name="hobby[]" value="reading">Reading </input> 
+  <input type="checkbox" id="chkD"   name="hobby[]" value="drawing" >Drawing </input> </br></br>
 
-      <hr>
-    </form>
+  DOB
+  <input  type="date" name="birth_date"> </input>  <br><br> 
+ 
+  <button type="submit">Save changes</button>
+
+  <hr>
+</form>
